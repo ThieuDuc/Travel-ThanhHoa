@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,300&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.css';
+// @import 'bootstrap/dist/css/bootstrap.min.css';
+:root{
+    --main-color:#6dbfe2;
+    --subtext:'Open Sans', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    position: relative;   
+}
+.header-top .menu-top{
+    position: fixed;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    padding: 140px 0 0 50px;
+    /* display: none; */
+    /* opacity: 0; */
+    position: absolute;
+    z-index: 1;
+    background: none;
+}
+.header-top .menu-top.active{
+    display: block;
+    opacity: 1; 
+}
+.header-top .menu-top li{
+    margin-bottom: 20px;
+    list-style: none;
+    font-size: 20px;
+    cursor: pointer;
+    animation: fade 0.3s linear backwards;
+    animation-delay: calc(0.3s * var(--x));
+}
+@keyframes fade{
+    0%{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
+.header-top .menu-top li a{
+    display: block;
+    background-color: var(--main-color);
+    padding: 15px;
+    transition: all 0.3s ease;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    color: white;
+}
+.header-top .menu-top li a:hover{
+    color: palevioletred;
+}
+// .iamge{
+//     height: 100vh;
+//     width: 100vw;
+// }
+// .iamge img{
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+// }
+.video{
+    height: 100vh;
+    width: 100vw;
+}
+.video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*Tour Nhiều Người Đặt*/
+.content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    background-color: rgba(255, 255,255, 0.1);
+    padding: 150px 50px 0 50px;
+    text-align: center;
+    width: 400px;
+    
+}
+// .content> h1{
+//     color: var(--main-color);
+// }
+.content> p{
+    color: var(--main-color);
+}
+.content h1{
+    color: var(--main-color);
+}
+form{
+    padding: 30px  12px ;
+    background-color: none;
+    margin-top: 30px;
+}
+form h1{
+    color: #333;
+    font-size: 27px;
+
+}
+form input{
+    width: 100%;
+    height: 35px;
+    padding-left: 12px;
+    outline: none;
+    background-color: #dddd;
+    border: none;
+}
+form p{
+    text-align: left;
+    color: var(--main-color);
+    margin: 8px 0 3px;
+}
+form button{
+    height: 35px;
+    width: 150px;
+    background-color: var(--main-color);
+    color: white;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+form button:hover{
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+.footer{
+    padding: 50px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 20px;
+    /* background-color: #94c1d5; */
+    border-top-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    animation: fade 2s linear backwards;
+    animation-delay: calc(1s * var(--x));
+    font-family: segoe ui light;
+}
+    @keyframes fade{
+        0%{
+            transform: translateY(-30px);
+            opacity: 0;
+        }
+    }
+.column1{
+    width: 25%;
+}
+.column1 h3{
+    margin-bottom: 30px;
+}
+.column2 h3{
+    margin-bottom: 30px;
+}
+.column3 h3{
+    margin-bottom: 30px;
+}
+.column4 h3{
+    margin-bottom: 30px;
+}
+.column1 p{
+    font-size: 15px;
+    font-family:segoe ui light ;
+}
+.column4 p{
+    font-size: 15px;
+    font-family:segoe ui light ;
+}
+.column2{
+    width: 25%;
+    flex-wrap: wrap;
+}
+.column2 a{
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+.column2 a:hover{
+    color: yellow;
+}
+.column3{
+    width: 25%;
+}
+.column3 a img{
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+.column3 a img:hover{
+    box-shadow: 2px 2px 10px black;
+}
+.column4{
+    width: 25%;
+}
